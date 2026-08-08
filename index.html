@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CYPHER — an interactive visual cipher machine."
+    />
+    <title>CYPHER — Interactive Cipher Machine</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">CRYPTOGRAPHY VISUALIZED</p>
+          <h1>CYPHER<span class="title-mark">.</span></h1>
+          <p class="subtitle">AN INTERACTIVE CIPHER MACHINE</p>
+        </div>
+        <div class="system-status" aria-label="System status: ready">
+          <span class="status-dot"></span>
+          <span>SYSTEM READY</span>
+        </div>
+      </header>
+
+      <section class="message-panel panel" aria-labelledby="input-heading">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">01 / INPUT</p>
+            <h2 id="input-heading">Message intake</h2>
+          </div>
+          <span id="character-count" class="mono">0 / 500</span>
+        </div>
+        <label class="sr-only" for="message-input">Message to encode or decode</label>
+        <textarea
+          id="message-input"
+          maxlength="500"
+          placeholder="Enter your message..."
+          spellcheck="false"
+        ></textarea>
+      </section>
+
+      <section class="machine-section" aria-labelledby="machine-heading">
+        <div class="machine-heading">
+          <div>
+            <p class="section-index">02 / CIPHER ENGINE</p>
+            <h2 id="machine-heading">Rotor assembly</h2>
+          </div>
+          <p class="machine-note mono">SIGNAL PATH: INPUT → OUTPUT</p>
+        </div>
+
+        <div class="machine-stage">
+          <div class="signal-label input-label"><span></span>INPUT</div>
+          <div class="signal-line line-in" aria-hidden="true"></div>
+
+          <div class="rotor-row" aria-label="Three cipher rotors">
+            <article class="rotor-unit" data-rotor="1">
+              <button class="rotor" type="button" aria-label="Select Rotor I">
+                <span class="rotor-teeth"></span>
+                <span class="rotor-face">
+                  <span class="rotor-ring ring-outer"></span>
+                  <span class="rotor-ring ring-inner"></span>
+                  <span class="rotor-window">A</span>
+                  <span class="rotor-spokes" aria-hidden="true"></span>
+                  <span class="rotor-core"></span>
+                </span>
+              </button>
+              <p>ROTOR I</p>
+              <span class="rotor-code mono">AXL-01</span>
+            </article>
+
+            <div class="connector" aria-hidden="true"><i></i><i></i><i></i></div>
+
+            <article class="rotor-unit" data-rotor="2">
+              <button class="rotor" type="button" aria-label="Select Rotor II">
+                <span class="rotor-teeth"></span>
+                <span class="rotor-face">
+                  <span class="rotor-ring ring-outer"></span>
+                  <span class="rotor-ring ring-inner"></span>
+                  <span class="rotor-window">A</span>
+                  <span class="rotor-spokes" aria-hidden="true"></span>
+                  <span class="rotor-core"></span>
+                </span>
+              </button>
+              <p>ROTOR II</p>
+              <span class="rotor-code mono">BQE-02</span>
+            </article>
+
+            <div class="connector" aria-hidden="true"><i></i><i></i><i></i></div>
+
+            <article class="rotor-unit" data-rotor="3">
+              <button class="rotor" type="button" aria-label="Select Rotor III">
+                <span class="rotor-teeth"></span>
+                <span class="rotor-face">
+                  <span class="rotor-ring ring-outer"></span>
+                  <span class="rotor-ring ring-inner"></span>
+                  <span class="rotor-window">A</span>
+                  <span class="rotor-spokes" aria-hidden="true"></span>
+                  <span class="rotor-core"></span>
+                </span>
+              </button>
+              <p>ROTOR III</p>
+              <span class="rotor-code mono">CRY-03</span>
+            </article>
+          </div>
+
+          <div class="signal-line line-out" aria-hidden="true"></div>
+          <div class="signal-label output-label">OUTPUT<span></span></div>
+        </div>
+      </section>
+
+      <section class="control-layout" aria-label="Machine controls and settings">
+        <div class="settings panel">
+          <div class="section-heading compact">
+            <div>
+              <p class="section-index">03 / CONFIGURATION</p>
+              <h2>Machine configuration</h2>
+            </div>
+            <span class="mono settings-hint">REFLECTOR / PLUGBOARD: NOT INSTALLED</span>
+          </div>
+          <div class="machine-config-grid" aria-label="Machine configuration controls">
+            <div class="config-row">
+              <span class="config-label">ROTOR I</span>
+              <label>TYPE
+                <select class="rotor-select" data-rotor-index="0" aria-label="Rotor I type"></select>
+              </label>
+              <label>START
+                <select class="position-select" data-rotor-index="0" aria-label="Rotor I starting position"></select>
+              </label>
+            </div>
+            <div class="config-row">
+              <span class="config-label">ROTOR II</span>
+              <label>TYPE
+                <select class="rotor-select" data-rotor-index="1" aria-label="Rotor II type"></select>
+              </label>
+              <label>START
+                <select class="position-select" data-rotor-index="1" aria-label="Rotor II starting position"></select>
+              </label>
+            </div>
+            <div class="config-row">
+              <span class="config-label">ROTOR III</span>
+              <label>TYPE
+                <select class="rotor-select" data-rotor-index="2" aria-label="Rotor III type"></select>
+              </label>
+              <label>START
+                <select class="position-select" data-rotor-index="2" aria-label="Rotor III starting position"></select>
+              </label>
+            </div>
+          </div>
+          <div class="position-readout">
+            <div><span>01</span><strong id="position-1">A</strong><small>ROTOR I</small></div>
+            <div><span>02</span><strong id="position-2">A</strong><small>ROTOR II</small></div>
+            <div><span>03</span><strong id="position-3">A</strong><small>ROTOR III</small></div>
+          </div>
+          <button id="reset-configuration" class="config-reset" type="button">RESET CONFIGURATION</button>
+        </div>
+
+        <div class="action-controls">
+          <button class="action-button primary" type="button" data-mode="encrypt">ENCRYPT <span>↗</span></button>
+          <button class="action-button" type="button" data-mode="decrypt">DECRYPT <span>↙</span></button>
+          <button id="reset-button" class="reset-button" type="button">RESET MACHINE</button>
+        </div>
+      </section>
+
+      <section class="machine-state panel" aria-labelledby="state-heading">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-index">04 / LIVE STATE</p>
+            <h2 id="state-heading">Machine state</h2>
+          </div>
+          <span id="machine-state-status" class="state-status mono">READY</span>
+        </div>
+        <div class="state-grid">
+          <div class="state-rotors" aria-label="Current rotor positions">
+            <div><span>ROTOR I</span><strong class="state-rotor-position">A</strong></div>
+            <div><span>ROTOR II</span><strong class="state-rotor-position">A</strong></div>
+            <div><span>ROTOR III</span><strong class="state-rotor-position">A</strong></div>
+          </div>
+          <div class="state-detail"><span>OPERATION</span><strong id="machine-state-operation">IDLE</strong></div>
+          <div class="state-detail"><span>CHARACTER</span><strong id="machine-state-character">—</strong></div>
+          <div class="state-detail"><span>PROCESSED</span><strong id="machine-state-progress">0 / 0</strong></div>
+        </div>
+      </section>
+
+      <section class="output-panel panel" aria-labelledby="output-heading">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">05 / OUTPUT</p>
+            <h2 id="output-heading">Cipher result</h2>
+          </div>
+          <button id="copy-button" class="copy-button" type="button" disabled>COPY RESULT</button>
+        </div>
+        <output id="result-output" class="result-display" aria-live="polite">
+          <span class="result-placeholder">Awaiting a message transmission.</span>
+        </output>
+        <p id="machine-feedback" class="feedback mono">ENGINE IDLE — CIPHER LOGIC NOT YET INITIALIZED</p>
+      </section>
+
+      <section class="history-panel panel" aria-labelledby="history-heading">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-index">06 / OPERATION LOG</p>
+            <h2 id="history-heading">Operation history</h2>
+          </div>
+          <button id="clear-history" class="history-clear" type="button">CLEAR HISTORY</button>
+        </div>
+        <p class="history-note mono">STORED LOCALLY IN THIS BROWSER · LAST 12 OPERATIONS</p>
+        <ol id="history-list" class="history-list" aria-live="polite"></ol>
+        <p id="history-empty" class="history-empty mono">NO COMPLETED OPERATIONS RECORDED.</p>
+      </section>
+
+      <footer>DESIGNED FOR EXPLORATION <span>◆</span> CYPHER INTERFACE / v0.1</footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
