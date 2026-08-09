@@ -8,6 +8,8 @@ Instead of simply displaying an encrypted result, CYPHER is designed to visualiz
 
 > Built with HTML, CSS, and Vanilla JavaScript.
 
+#Live Demo : https://biasedfilms.github.io/cypher/
+
 ---
 
 ## Overviewa
