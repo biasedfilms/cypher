@@ -12,7 +12,7 @@ Instead of simply displaying an encrypted result, CYPHER is designed to visualiz
 
 ---
 
-## Overviewa
+## Overview
 
 CYPHER was created as an exploration of how classical cryptography can be presented through an interactive and visual interface.
 
