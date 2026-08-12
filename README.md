@@ -8,9 +8,8 @@ Instead of simply displaying an encrypted result, CYPHER is designed to visualiz
 
 > Built with HTML, CSS, and Vanilla JavaScript.
 
-## Live Demo
 
-**[Open Cypher](https://biasedfilms.github.io/cypher/)**
+**[Open Cypher](https://cypher-mikael.vercel.app/)**
 
 ---
 
