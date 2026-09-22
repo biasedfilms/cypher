@@ -158,37 +158,6 @@ cypher/
 └── README.md
 ```
 
-### `index.html`
-
-Contains the structure of the CYPHER interface, including the input area, rotor assembly, machine configuration, live state, output, and operation history.
-
-### `style.css`
-
-Contains the visual design, responsive layout, animations, machine visualization, and color system.
-
-### `script.js`
-
-Contains the cipher logic, machine configuration, rotor state, encryption/decryption behavior, UI interactions, animations, and operation history.
-
----
-
-## Running Locally
-
-CYPHER is a client-side application and does not require a build process or package installation.
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/biasedfilms/cypher.git
-cd cypher
-```
-
-### 2. Run the project
-
-Open `index.html` directly in your browser, or use a local development server such as VS Code Live Server.
-
-No additional dependencies are required.
-
 ---
 
 ## Design
@@ -251,11 +220,15 @@ CYPHER is an actively developing project. The current version provides the core 
 
 ---
 
+## License
+
+MIT LICENSE
+
+---
+
 ## Author
 
 **Mikael Kalesaran**
-
-Informatics Engineering Student
 
 ---
 
